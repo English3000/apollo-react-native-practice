@@ -6,8 +6,8 @@ import HomePage from './HomePage';
 
 export default class App extends React.Component {
   render() {
-    const networkInterface = createNetworkInterface({ uri: 'http://localhost:3000/graphql' });
-    const client = new ApolloClient({ networkInterface });
+    const networkInterface = createNetworkInterface({ uri: 'http://localhost:3000/graphiql' });
+    const client = new ApolloClient({ networkInterface }); //not working
 
     return <ApolloProvider client={client}><HomePage/></ApolloProvider>;
   }
